@@ -3,11 +3,13 @@ import pyodbc
 
 app = Flask(__name__)
 
+import sqlite3
+
 def get_db_connection():
-    server = '.\\SQLEXPRESS' 
-    database = 'DreamTravels'
-    conn_str = f'DRIVER={{SQL Server}};SERVER={server};DATABASE={database};Trusted_Connection=yes;'
-    return pyodbc.connect(conn_str)
+    # এটি database.db ফাইলটির সাথে কানেক্ট করবে
+    conn = sqlite3.connect('database.db')
+    conn.row_factory = sqlite3.Row # এতে ডাটাগুলো ডিকশনারি আকারে পাওয়া যায়
+    return conn
 
 @app.route('/dashboard')
 def dashboard():
