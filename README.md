@@ -67,7 +67,8 @@ Check out the live application here: [https://dream-travels-bd.onrender.com](htt
 ---
 
 ##  Developed By
-**Md Azizur Rahman** *Student of Computer Science and Engineering* 
+**Md Azizur Rahman** 
+*Student of Computer Science and Engineering* 
 **Northern University of Bangladesh** [GitHub Profile](https://github.com/azizurrahmance67)
 
 ---
