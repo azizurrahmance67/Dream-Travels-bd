@@ -1,14 +1,14 @@
-from flask import Flask, render_template, request
-import pyodbc
+from flask import Flask, render_template, request, redirect 
+import sqlite3
+import os
 
 app = Flask(__name__)
 
 import sqlite3
 
-def get_db_connection():
-    # এটি database.db ফাইলটির সাথে কানেক্ট করবে
+def get_db_connection():  
     conn = sqlite3.connect('database.db')
-    conn.row_factory = sqlite3.Row # এতে ডাটাগুলো ডিকশনারি আকারে পাওয়া যায়
+    conn.row_factory = sqlite3.Row 
     return conn
 
 @app.route('/dashboard')
